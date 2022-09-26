@@ -1,0 +1,33 @@
+<%- include ../layouts/cabecera.ejs %>
+    <br/>
+    <br/>
+    <a href="/myapp/crear" class="btn btn-primary" type="button">Registrar nuevo usuario</a>
+    <br/>
+    <br/>
+
+    <table class="table table-light">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">User</th>
+                <th scope="col">Password</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for( let usuario = 0; usuario < usuarios.length; usuario++ ) { %>
+                <tr>
+                    <td> <%=usuarios[usuario].id %> </td>
+                    <td> <%=usuarios[usuario].user %> </td>
+                    <td> <%=usuarios[usuario].password %> </td>
+                    <td> <%=usuarios[usuario].foto %> </td>
+                    <td> Editar | Borrar </td>
+                </tr>
+            
+            <% } %>
+            
+        </tbody>
+
+    </table>
+<%- include ../layouts/pie.ejs %>

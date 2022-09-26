@@ -1,0 +1,20 @@
+<%- include ../layouts/cabecera.ejs %>
+<form method="post" action="" enctype="multipart/form-data">
+    <div class="mb-4">
+        <label for="email" class="form-label">User: </label>
+        <input type="email" class="form-control" name="user">
+
+
+    </div>
+    <div class="mb-4">
+        <label for="password" class="form-label">Password: </label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    
+</form>
+
+
+<%- include ../layouts/pie.ejs %>
